@@ -1,6 +1,6 @@
 import sqlite3
 
-conn= sqlite3.connect('my_daily_task_tracker.db')
+conn= sqlite3.connect('daily_task_tracker.db')
 cursor=conn.cursor()
 
 cursor.execute('''
