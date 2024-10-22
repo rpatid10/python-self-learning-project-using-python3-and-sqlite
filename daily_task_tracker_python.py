@@ -40,14 +40,14 @@ def update_task(task_id,task_name,task_priority, task_type, task_total_time, tas
          task_comments=? where task_id=?''',(task_name,task_priority, task_type, task_total_time, task_spent_time, task_current_status, task_eta,
          task_comments,task_id))
     if cursor.rowcount == 0:
-        print("No video found with that ID!")
+        print("No task found with that ID!")
     else:
         conn.commit()
 
 def delete_task(task_id):
     cursor.execute('''delete from tasks where task_id=?''',(task_id))
     if cursor.rowcount==0:
-        print("No video found with entered Id")
+        print("No task found with entered Id")
     else:
         conn.commit()
 
